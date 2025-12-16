@@ -1,0 +1,115 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2563a8;
+  --ifm-color-primary-dark: #215997;
+  --ifm-color-primary-darker: #1f548f;
+  --ifm-color-primary-darkest: #1a4676;
+  --ifm-color-primary-light: #296db9;
+  --ifm-color-primary-lighter: #2d72c1;
+  --ifm-color-primary-lightest: #3d82d1;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #f0c419;
+  --ifm-color-primary-dark: #d8af17;
+  --ifm-color-primary-darker: #cca515;
+  --ifm-color-primary-darkest: #ad8c12;
+  --ifm-color-primary-light: #f2ca2e;
+  --ifm-color-primary-lighter: #f4d043;
+  --ifm-color-primary-lightest: #f7d858;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Lighten footer in light mode for better contrast with blue links */
+.footer {
+  background-color: #f5f6f7;
+  border-top: 1px solid #e3e5e8;
+}
+
+/* Dark footer text for light mode */
+.footer,
+.footer__title,
+.footer__item,
+.footer__link-item,
+.footer a,
+.footer__copyright {
+  color: #1c1e21;
+}
+
+/* Darken footer in dark mode for better contrast */
+[data-theme='dark'] .footer {
+  background-color: #1a1a1a;
+  border-top: 1px solid #2a2a2a;
+}
+
+[data-theme="dark"] .footer,
+[data-theme="dark"] .footer__title,
+[data-theme="dark"] .footer__item,
+[data-theme="dark"] .footer__link-item,
+[data-theme="dark"] .footer a,
+[data-theme="dark"] .footer__copyright {
+  color: #ffffff;
+}
+
+/* Hide all dates from blog posts */
+.theme-blog-post-page time,
+.theme-blog-list-page time,
+article time,
+.margin-bottom--md time,
+time[datetime],
+.blogPostData_node_modules-\@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Info-styles-module time,
+header time {
+  display: none !important;
+}
+
+/* Also hide any date-related metadata containers that might be empty after hiding dates */
+.blogPostData_node_modules-\@docusaurus-theme-classic-lib-theme-BlogPostItem-Header-Info-styles-module:empty {
+  display: none !important;
+}
+
+/* Hide all separator elements in blog metadata */
+article header .margin-bottom--md > *::before,
+article header .margin-bottom--md > *::after,
+[class*="blogPostData"] > *::before,
+[class*="blogPostData"] > *::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Remove list-style from blog metadata */
+[class*="blogPostData"] {
+  list-style: none !important;
+}
+
+/* Hide any spans that are just separators (contain only • or ·) */
+article header span:empty,
+article header span:not(:has(*)):not([class]) {
+  display: none !important;
+}
+
+/* Footer styling */
+.villanite-footer {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.real-footer {
+  color: #555;
+  display: block;
+  padding-top: 1em;
+  font-size: xx-small;
+}
+
+.real-footer a {
+  color: #555;
+  text-decoration: none;
+}
