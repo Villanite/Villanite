@@ -33,7 +33,7 @@ export default function Home(): ReactNode {
       "@type": "Person",
       "@id": "https://villanite.com/#person",
       "name": "Aries Villanite",
-      "jobTitle": "Emperor of the Empire of Avinadal",
+      "jobTitle": "Emperor of Avinadal",
       "description": "Sovereign ruler of the Empire of Avinadal, a science-fantasy realm spanning countless worlds. This is a fictional character in a creative lore-driven universe.",
       "url": "https://villanite.com",
       "image": "https://villanite.com/img/ariel.jpg",
@@ -76,7 +76,7 @@ export default function Home(): ReactNode {
   return (
     <Layout description="Official digital presence of Emperor Aries Villanite and the Empire of Avinadal">
       <Head>
-        <title>Aries Villanite - Emperor of the Empire of Avinadal</title>
+        <title>Aries Villanite - Emperor of Avinadal</title>
         {schemas.map((schema, index) => (
           <script key={index} type="application/ld+json">
             {JSON.stringify(schema)}
