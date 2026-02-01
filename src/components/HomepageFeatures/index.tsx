@@ -35,8 +35,7 @@ export default function HomepageFeatures(): ReactNode {
           <article>
             <Heading as="h3">
               <Link to={permalink}>{title}</Link>
-            </Heading>
-            <p className={styles.blogDate}>{displayDate}</p>
+            </Heading>            
             <div className={styles.blogContent}>
               {description && <p>{description}</p>}
               <Link to={permalink} className={styles.readMore}>
