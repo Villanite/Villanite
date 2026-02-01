@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Aries Villanite',
-  tagline: 'Emperor of the Empire of Avinadal',
+  tagline: 'Emperor of Avinadal',
   favicon: 'img/favicon.ico',
   titleDelimiter: ' - ',
 
