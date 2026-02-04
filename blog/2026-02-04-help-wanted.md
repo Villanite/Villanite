@@ -7,6 +7,8 @@ authors: [aries]
 
 So... I'm having a bit of a conflict. See, I've been out of Role-Play (RP) for a whole year again and the itch is starting back up. Admittedly, I think the itch to RP is a lot less vast these days, and a lot more selective. I really only find the fun in RP when it comes to specific stories that I haven't played out 1000 times in the past or characters that introduce something new to Aries. The problem with that is that over 20+ years of RP... it's insanely difficult to find themes and scenarios I haven't already RPed.
 
+<!--truncate-->
+
 The problem is: As much as it may be hard for me to find active long-term RPs that keep me interested, I also really want to run a positive RP community of my own again.
 
 For anyone who doesn't know, I actually used to run a RP website called Role-Player's Guild, or RPG. The site ran for a few years and at our peak, we had four-digit membership counts and five-digit character counts. I ended up shutting the site down, though, because the community's toxicity became more than I was willing to deal with or put my volunteer staff through. We weren't making money, but we were getting treated like trash by so many people for providing a free service that it made me lose all passion in that kind of project.
