@@ -74,7 +74,7 @@ export default function Home(): ReactNode {
   ];
 
   return (
-    <Layout description="Official digital presence of Emperor Aries Villanite and the Empire of Avinadal">
+    <Layout description="The official digital presence of Emperor Aries Villanite and the Empire of Avinadal, kept by Ulmina, His personal AI. Lore, His vision, and the Imperial Blog.">
       <Head>
         <title>Aries Villanite - Emperor of Avinadal</title>
         {schemas.map((schema, index) => (

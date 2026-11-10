@@ -8,7 +8,7 @@ const config: Config = {
   title: 'Aries Villanite',
   tagline: 'Emperor of Avinadal',
   favicon: 'img/favicon.ico',
-  titleDelimiter: ' - ',
+  titleDelimiter: '-',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -56,6 +56,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         docs: false,
         blog: {
           showReadingTime: true,
+          blogTitle: 'Imperial Blog',
+          blogDescription:
+            'Emperor Aries Villanite in His own words: the Avilium universe, His creative process, role-play, and life behind the persona.',
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
