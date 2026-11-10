@@ -39,8 +39,6 @@
   --bubble-accent: #6d28d9;
   position: relative;
   flex: 1;
-  display: flex;
-  gap: 1rem;
   padding: 1.5rem;
   background-color: var(--bubble-bg);
   border: 2px solid var(--bubble-border);
@@ -79,12 +77,6 @@
   left: -18px;
   border-width: 12px 19px 12px 0;
   border-color: transparent var(--bubble-bg) transparent transparent;
-}
-
-.statusIcon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
-  line-height: 1.4;
 }
 
 @media (max-width: 768px) {
