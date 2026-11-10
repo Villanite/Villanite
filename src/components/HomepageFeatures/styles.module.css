@@ -5,24 +5,31 @@
   width: 100%;
 }
 
-/* Current Work Status Section */
+/* Welcome Section */
 .statusSection {
   max-width: 960px;
   margin: 0 auto 3rem;
   padding: 0 1rem;
 }
 
-.statusSection h2 {
+.statusSection h2,
+.blogPost h2 {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 2rem;
   color: var(--ifm-heading-color);
 }
 
+/* Portrait + speech bubble row. Ulmina's portrait sits left; Aries's row is
+   reversed so His portrait sits right. Both stack portrait-first on mobile. */
 .welcomeRow {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+.ariesRow {
+  flex-direction: row-reverse;
 }
 
 .portrait {
@@ -32,32 +39,57 @@
   filter: drop-shadow(0 0 12px rgba(150, 120, 255, 0.35));
 }
 
-.statusAlert {
-  --bubble-bg: #f3edff;
-  --bubble-border: #8b5cf6;
-  --bubble-text: #3b1f73;
-  --bubble-accent: #6d28d9;
+.ariesPortrait {
+  width: 260px;
+  filter: drop-shadow(0 0 12px rgba(229, 184, 46, 0.3));
+}
+
+/* Speech bubble. Colours come from the per-speaker variables below. */
+.bubble {
   position: relative;
   flex: 1;
   padding: 1.5rem;
   background-color: var(--bubble-bg);
   border: 2px solid var(--bubble-border);
   border-radius: 20px;
-  box-shadow: 0 4px 14px rgba(109, 40, 217, 0.18);
+  box-shadow: 0 4px 14px var(--bubble-glow);
 }
 
-[data-theme='dark'] .statusAlert {
-  --bubble-bg: #261a40;
+.ulminaBubble {
+  --bubble-bg: #f3edff;
   --bubble-border: #8b5cf6;
+  --bubble-text: #3b1f73;
+  --bubble-accent: #6d28d9;
+  --bubble-glow: rgba(109, 40, 217, 0.18);
+}
+
+[data-theme='dark'] .ulminaBubble {
+  --bubble-bg: #261a40;
   --bubble-text: #e4dcfb;
   --bubble-accent: #c4b5fd;
-  box-shadow: 0 0 18px rgba(139, 92, 246, 0.25);
+  --bubble-glow: rgba(139, 92, 246, 0.25);
 }
 
-/* Speech-bubble tail pointing at the portrait: outer triangle draws the
-   border, inner triangle (2px smaller, offset 3px) fills with the bubble colour. */
-.statusAlert::before,
-.statusAlert::after {
+.ariesBubble {
+  --bubble-bg: #fdf6dc;
+  --bubble-border: #c9a227;
+  --bubble-text: #3d3008;
+  --bubble-accent: #8a6a00;
+  --bubble-glow: rgba(201, 162, 39, 0.2);
+}
+
+[data-theme='dark'] .ariesBubble {
+  --bubble-bg: #17140c;
+  --bubble-border: #e5b82e;
+  --bubble-text: #ece3c6;
+  --bubble-accent: #f2cc4d;
+  --bubble-glow: rgba(229, 184, 46, 0.22);
+}
+
+/* Tail: outer triangle draws the border, inner triangle fills with the
+   bubble colour. Points left at Ulmina, right at Aries. */
+.bubble::before,
+.bubble::after {
   content: '';
   position: absolute;
   top: 15%;
@@ -67,20 +99,33 @@
   transform: translateY(-50%);
 }
 
-.statusAlert::before {
+.ulminaBubble::before {
   left: -22px;
   border-width: 14px 22px 14px 0;
   border-color: transparent var(--bubble-border) transparent transparent;
 }
 
-.statusAlert::after {
+.ulminaBubble::after {
   left: -18px;
   border-width: 12px 19px 12px 0;
   border-color: transparent var(--bubble-bg) transparent transparent;
 }
 
+.ariesBubble::before {
+  right: -22px;
+  border-width: 14px 0 14px 22px;
+  border-color: transparent transparent transparent var(--bubble-border);
+}
+
+.ariesBubble::after {
+  right: -18px;
+  border-width: 12px 0 12px 19px;
+  border-color: transparent transparent transparent var(--bubble-bg);
+}
+
 @media (max-width: 768px) {
-  .welcomeRow {
+  .welcomeRow,
+  .ariesRow {
     flex-direction: column;
     gap: 1.5rem;
   }
@@ -89,28 +134,29 @@
     width: 160px;
   }
 
+  .ariesPortrait {
+    width: 200px;
+  }
+
   /* Stacked layout: tail points up at the portrait instead. */
-  .statusAlert::before,
-  .statusAlert::after {
+  .bubble::before,
+  .bubble::after {
     left: 50%;
+    right: auto;
     transform: translateX(-50%);
   }
 
-  .statusAlert::before {
+  .bubble::before {
     top: -22px;
     border-width: 0 14px 22px 14px;
     border-color: transparent transparent var(--bubble-border) transparent;
   }
 
-  .statusAlert::after {
+  .bubble::after {
     top: -18px;
     border-width: 0 12px 19px 12px;
     border-color: transparent transparent var(--bubble-bg) transparent;
   }
-}
-
-.statusContent {
-  flex: 1;
 }
 
 .statusContent strong {
@@ -126,30 +172,11 @@
   line-height: 1.6;
 }
 
-
+/* Latest blog post, spoken by Aries */
 .blogPost {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 2rem 1rem;
-}
-
-.blogPost h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: var(--ifm-heading-color);
-}
-
-.blogPost article {
-  padding: 2rem;
-  border-radius: 8px;
-  background: var(--ifm-card-background-color);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.2s ease-in-out;
-}
-
-.blogPost article:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .blogPost h3 {
@@ -159,40 +186,34 @@
 }
 
 .blogPost h3 a {
-  color: inherit;
+  color: var(--bubble-accent);
   text-decoration: none;
 }
 
 .blogPost h3 a:hover {
-  color: var(--ifm-color-primary);
-}
-
-.blogDate {
-  color: var(--ifm-color-emphasis-600);
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
+  text-decoration: underline;
 }
 
 .blogContent {
   line-height: 1.6;
-  color: var(--ifm-color-emphasis-800);
+  color: var(--bubble-text);
 }
 
 .blogContent p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-size: 1rem;
 }
 
 .readMore {
   display: inline-block;
-  margin-top: 0.5rem;
   font-weight: 600;
-  color: var(--ifm-color-primary);
+  color: var(--bubble-accent);
   text-decoration: none;
   transition: transform 0.2s ease;
 }
 
 .readMore:hover {
+  color: var(--bubble-accent);
   text-decoration: underline;
   transform: translateX(4px);
 }
