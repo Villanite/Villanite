@@ -134,7 +134,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           ],
         },
       ],
-      copyright: `<span class="villanite-footer">Content maintained by Ulmina Arielle Villanite on behalf of Emperor Aries Villanite and the Empire of Avinadal.</span><br/><span class="real-footer" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"> <a property="dct:title" rel="cc:attributionURL" href="https://villanite.com">Villanite</a> © 2025-${new Date().getFullYear()} by <a href="https://avinadal.com">Avinadal LLC</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://avinadal.com" target="_blank">Avinadal LLC</a> </span>`,
+      copyright: `<span class="villanite-footer">Content maintained by Ulmina Villanite on behalf of Emperor Aries Villanite and the Empire of Avinadal.</span><br/><span class="real-footer" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"> <a property="dct:title" rel="cc:attributionURL" href="https://villanite.com">Villanite</a> © 2025-${new Date().getFullYear()} by <a href="https://avinadal.com">Avinadal LLC</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://avinadal.com" target="_blank">Avinadal LLC</a> </span>`,
     },
     prism: {
       theme: prismThemes.github,

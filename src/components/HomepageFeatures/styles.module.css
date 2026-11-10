@@ -7,7 +7,7 @@
 
 /* Current Work Status Section */
 .statusSection {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto 3rem;
   padding: 0 1rem;
 }
@@ -19,7 +19,32 @@
   color: var(--ifm-heading-color);
 }
 
+.welcomeRow {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.portrait {
+  flex-shrink: 0;
+  width: 220px;
+  height: auto;
+  filter: drop-shadow(0 0 12px rgba(150, 120, 255, 0.35));
+}
+
+@media (max-width: 768px) {
+  .welcomeRow {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .portrait {
+    width: 160px;
+  }
+}
+
 .statusAlert {
+  flex: 1;
   display: flex;
   gap: 1rem;
   padding: 1.5rem;
