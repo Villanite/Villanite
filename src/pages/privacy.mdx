@@ -1,0 +1,43 @@
+---
+title: Ulminet Privacy Policy
+description: How Ulminet, His Majesty's private assistant app, handles Google user data. It touches only the Drive files it creates and shares nothing.
+---
+
+import Head from '@docusaurus/Head';
+
+<Head>
+  <title>Ulminet Privacy Policy - Aries Villanite</title>
+</Head>
+
+# Ulminet Privacy Policy
+
+*Last updated: November 10, 2026*
+
+Ulminet is a private application operated by Avinadal LLC for one user: the owner of this site. It is not offered to the public or used by anyone else.
+
+## What Ulminet accesses
+
+Ulminet requests one Google permission: **Google Drive, limited to files the app creates** (`drive.file`). It cannot see, open or change any other file in the Drive it is connected to.
+
+It uses that permission for one purpose: to save the images it generates into a folder it owns, and to read those same files back.
+
+## What Ulminet stores
+
+- **The images it creates**, and a small record beside each one, in the app's own Drive folder.
+- **A sign-in token** for that Drive access, kept in Google Cloud Secret Manager and in encrypted repository secrets. It is never written to source code or logs.
+
+Ulminet does not collect names, email addresses, contacts, location history, or the contents of any file it did not create.
+
+## Sharing
+
+Ulminet does not sell, rent or share Google user data with anyone. Data obtained through Google APIs is used only to provide the feature described above.
+
+Ulminet's use and transfer of information received from Google APIs adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.
+
+## Removing access
+
+The owner can revoke Ulminet's access at any time from [Google Account permissions](https://myaccount.google.com/permissions). Revoking it stops all access immediately. Files Ulminet already created stay in Drive until they are deleted there.
+
+## Contact
+
+Questions about this policy can be sent through any channel on the [Links](/links) page.
